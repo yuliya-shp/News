@@ -1,8 +1,8 @@
 //
 //  DetailViewController.swift
-//  NewsApp
+//  daily-news
 //
-//
+//  
 //
 
 import UIKit
@@ -30,7 +30,7 @@ class DetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let desination = segue.destination as? WebPageViewController {
+        if let desination = segue.destination as? WebViewController {
             desination.articleUrl = article?.url
         }
     }

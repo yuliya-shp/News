@@ -1,14 +1,14 @@
 //
-//  WebPageViewController.swift
-//  NewsApp
+//  WebViewController.swift
+//  daily-news
 //
-//  
+//
 //
 
 import UIKit
 import WebKit
 
-class WebPageViewController: UIViewController {
+class WebViewController: UIViewController {
 
     var articleUrl: String!
     
@@ -19,6 +19,5 @@ class WebPageViewController: UIViewController {
 
         webView.load(URLRequest(url: URL(string: articleUrl)!))
     }
-    
 
 }

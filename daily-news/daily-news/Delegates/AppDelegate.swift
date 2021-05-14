@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  NewsApp
+//  daily-news
 //
 //  
 //

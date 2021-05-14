@@ -1,12 +1,11 @@
 //
 //  TableViewController.swift
-//  NewsApp
+//  daily-news
 //
 //
 //
 
 import UIKit
-import RealmSwift
 
 class TableViewController: UITableViewController, UISearchResultsUpdating {
     

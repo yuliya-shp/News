@@ -1,6 +1,6 @@
 //
 //  TableViewCell.swift
-//  NewsApp
+//  daily-news
 //
 //
 //

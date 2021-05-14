@@ -1,6 +1,6 @@
 //
 //  NewsModel.swift
-//  NewsApp
+//  daily-news
 //
 //
 //
