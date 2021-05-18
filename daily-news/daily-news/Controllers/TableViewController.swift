@@ -10,6 +10,7 @@ import UIKit
 class TableViewController: UITableViewController, UISearchResultsUpdating {
     
     var today: String!
+    var category = "business"
     var isLoading = false
     
     private var articles: [Article]? = []
@@ -44,6 +45,22 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
         fetchData(refresh: false)
     }
 
+    @IBAction func segmentedControlPressed(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: category = "business"
+            fetchData(refresh: false)
+        case 1: category = "science"
+            fetchData(refresh: false)
+        case 2: category = "health"
+            fetchData(refresh: false)
+        case 3: category = "sports"
+            fetchData(refresh: false)
+        case 4: category = "technology"
+            fetchData(refresh: false)
+        default: break
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -108,7 +125,7 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
         }
 
         let apiKey = "3fb18c84dc494acf8881f24bc00e400d"
-        let api = URL(string: "https://newsapi.org/v2/everything?q=apple&from=\(self.today!)/&to=\(self.today!)/&apiKey=\(apiKey)")
+        let api = URL(string: "https://newsapi.org/v2/top-headlines?category=\(self.category)&from=\(self.today!)/&to=\(self.today!)&country=us&apiKey=\(apiKey)")
         
         URLSession.shared.dataTask(with: api!) { (data, response, error) in
             guard let data = data else {return}

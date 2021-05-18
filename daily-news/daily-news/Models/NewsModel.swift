@@ -16,7 +16,5 @@ struct Article: Decodable {
 }
 
 struct NewsEnvelope: Decodable {
-    var status: String?
-    var totalResult: Int?
     var articles: [Article]
 }
